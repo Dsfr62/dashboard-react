@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CgMenuRightAlt, CgCloseO } from 'react-icons/cg';
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);
+    const [nav, setNav] = useState(true);
 
     const handleNav = () => {
         setNav(!nav)
@@ -17,6 +17,7 @@ const Navbar = () => {
                     <li className="p-4">Profile</li>
                     <li className="p-4">Settings</li>
                 </ul>
+
 
                 <div onClick={handleNav} className="block md:hidden">
                     {!nav ? <CgCloseO size={22} /> : <CgMenuRightAlt size={22}/>}

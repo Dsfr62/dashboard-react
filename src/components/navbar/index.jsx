@@ -1,15 +1,38 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
+import { CgMenuRightAlt, CgCloseO } from 'react-icons/cg';
 
-export const Navbar = () => {
+const Navbar = () => {
+    const [nav, setNav] = useState(false);
+
+    const handleNav = () => {
+        setNav(!nav)
+    };
+
     return (
-        <Fragment>
-            <a href="/">Logo</a>
-            <ul>
-                <li>Dashboard</li>
-                <li>Projects</li>
-                <li>Profile</li>
-                <li>Settings</li>
-            </ul>
-        </Fragment>
+        <div className="flex justify-between items-center shadow-md fixed top-0 left-0 text-white bg-black w-full h-20 mx-auto px-4">
+                <a className="text-3xl font-bold w-full text-customOrange">Logo</a>
+                <ul className="hidden md:flex">
+                    <li className="p-4">Dashboard</li>
+                    <li className="p-4">Projects</li>
+                    <li className="p-4">Profile</li>
+                    <li className="p-4">Settings</li>
+                </ul>
+
+                <div onClick={handleNav} className="block md:hidden">
+                    {!nav ? <CgCloseO size={22} /> : <CgMenuRightAlt size={22}/>}
+                </div>
+
+                <div className={!nav ? "fixed left-0 top-1 w-[60%] h-full border-r border-r-gray-900 bg-black ease-in duration-500" : "ease-in duration-500 fixed left-[-100%]"}>
+                    <a className="w-full text-3xl font-bold text-customOrange m-5">Logo</a>
+                    <ul className="p-4">
+                        <li className="p-4 border-b border-white">Dashboard</li>
+                        <li className="p-4 border-b border-white">Projects</li>
+                        <li className="p-4 border-b border-white">Profile</li>
+                        <li className="p-4 border-b border-white">Settings</li>
+                    </ul>
+                </div>
+        </div>
     );
 };
+
+export default Navbar;

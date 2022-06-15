@@ -1,24 +1,37 @@
 import React from "react";
-import NavOptions from "..";
+import NavOptionsMd from "..";
 import OptionList from "../optionList";
+import WindowSize from "../../../global/windowSize";
+import NavOptions from "../../navOptions";
 
 const settingsOptionsList = [
     {
-        text: "Teste",
+        text: "Help",
         link: "/",
     }
     ,    
     {
-        text: "Teste",
+        text: "Lang",
+        link: "/",
+    },
+    {
+        text: "Report",
         link: "/",
     }
 ];
 
 
 const SettingsOptions = () => {
-    return (
-        <NavOptions title="Settings"><OptionList options={settingsOptionsList}/></NavOptions>
-    );
+    if (WindowSize() <= 768){
+        return (
+            <NavOptionsMd title="Settings"><OptionList options={settingsOptionsList}/></NavOptionsMd>
+        );
+    } else {
+        return (
+            <NavOptions title="Settings"><OptionList options={settingsOptionsList}/></NavOptions>
+        );
+    };
 };
+
 
 export default SettingsOptions;

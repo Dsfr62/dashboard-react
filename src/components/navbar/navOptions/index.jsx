@@ -8,8 +8,11 @@ const NavOptions = ({title, children}) => {
     };
 
     return (
-        <div className="transition ease-linear delay-500 duration-700" onClick={handleOptions}>
-            {!showOptions ? <a>{title}</a> : children}
+        <div className="transition ease-linear delay-500 duration-700" onMouseEnter={handleOptions} onMouseLeave={handleOptions}>
+            <a className="pr-4">{title}</a>
+            <div className="md:absolute">
+                {!showOptions ? <></> : children}
+            </div>
         </div>
     );
 };

@@ -1,24 +1,32 @@
 import React from "react";
-import NavOptions from "..";
+import NavOptionsMd from "..";
 import OptionList from "../optionList";
+import WindowSize from "../../../global/windowSize";
+import NavOptions from "../../navOptions";
 
 const projectsOptionsList = [
     {
-        text: "Teste",
+        text: "Main",
         link: "/",
     }
     ,    
     {
-        text: "Teste",
+        text: "Index",
         link: "/",
     }
 ];
 
 
 const ProjectsOptions = () => {
-    return (
-        <NavOptions title="Projects"><OptionList options={projectsOptionsList}/></NavOptions>
-    );
+    if (WindowSize() <= 768){
+        return (
+            <NavOptionsMd title="Projects"><OptionList options={projectsOptionsList}/></NavOptionsMd>
+        );
+    } else {
+        return (
+            <NavOptions title="Projects"><OptionList options={projectsOptionsList}/></NavOptions>
+        );
+    };
 };
 
 export default ProjectsOptions;

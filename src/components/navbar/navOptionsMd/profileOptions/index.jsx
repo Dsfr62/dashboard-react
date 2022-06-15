@@ -1,24 +1,37 @@
 import React from "react";
-import NavOptions from "..";
+import NavOptionsMd from "..";
 import OptionList from "../optionList";
+import WindowSize from "../../../global/windowSize";
+import NavOptions from "../../navOptions";
 
 const profileOptionsList = [
     {
-        text: "Teste",
+        text: "Account",
         link: "/",
     }
     ,    
     {
-        text: "Teste",
+        text: "Groups",
+        link: "/",
+    },
+    {
+        text: "Leave",
         link: "/",
     }
 ];
 
 
 const ProfileOptions = () => {
-    return (
-        <NavOptions title="Profile"><OptionList options={profileOptionsList}/></NavOptions>
-    );
+    if (WindowSize() <= 768){
+        return (
+            <NavOptionsMd title="Profile"><OptionList options={profileOptionsList}/></NavOptionsMd>
+        );
+    } else {
+        return (
+            <NavOptions title="Profile"><OptionList options={profileOptionsList}/></NavOptions>
+        );
+    };
+
 };
 
 export default ProfileOptions;

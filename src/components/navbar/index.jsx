@@ -3,7 +3,7 @@ import { CgMenuRightAlt, CgCloseO } from 'react-icons/cg';
 import DashboardOptions from "./navOptionsMd/dashboardOptions";
 import ProfileOptions from "./navOptionsMd/profileOptions";
 import ProjectsOptions from "./navOptionsMd/projectsOptions";
-import SettingsOptions from './navOptionsMd/settingsOptions'
+import SettingsOptions from './navOptionsMd/settingsOptions';
 
 const Navbar = () => {
     const [nav, setNav] = useState(true);
@@ -14,13 +14,13 @@ const Navbar = () => {
 
     return (
         <div className="flex justify-between items-center shadow-md fixed top-0 left-0 text-white bg-black w-full h-20 mx-auto px-4">
-                <a className="text-3xl font-bold w-full text-customOrange">Logo</a>
-                <ul className="hidden md:flex">
-                    <li className="p-4">Dashboard</li>
-                    <li className="p-4">Projects</li>
-                    <li className="p-4">Profile</li>
-                    <li className="p-4">Settings</li>
-                </ul>
+            <a className="text-3xl font-bold w-full text-customOrange">Logo</a>
+            <ul className="hidden md:flex">
+                <li className="p-4"><DashboardOptions /></li>
+                <li className="p-4"><ProjectsOptions /></li>
+                <li className="p-4"><ProfileOptions /></li>
+                <li className="p-4"><SettingsOptions /></li>
+            </ul>
 
                 <div onClick={handleNav} className="block md:hidden">
                     {!nav ? <CgCloseO size={22} /> : <CgMenuRightAlt size={22}/>}

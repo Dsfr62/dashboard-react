@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NavOptions = ({title, children}) => {
+const NavOptionsMd = ({title, children}) => {
     const [showOptions, setOptions] = useState(false);
 
     const handleOptions = () => {
@@ -14,4 +14,4 @@ const NavOptions = ({title, children}) => {
     );
 };
 
-export default NavOptions;
+export default NavOptionsMd;

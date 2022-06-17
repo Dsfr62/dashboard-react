@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './components/navbar';
+import Dashboard from './components/dashboard';
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
-      <div className='bg-customGreen w-full h-screen'></div> 
-    </>
+      <Dashboard />
+    </div>
   )
 }
 

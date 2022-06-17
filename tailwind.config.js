@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'customOrange': '#FD4C00',
-        'customLightOrange': '#fc763d',
-        'customGreen': '#005a00',
+        'earthChoco': '#AE7C58',
+        'earthSalmon': '#F2CCB6',
+        'earthRose': '#D97E6A',
+        'earthNesquik': '#FAD5CF',
+        'earthLatte': '#F7D3A9',
+        'earthBanana': '#FFF2A6',
       },
     },
   },

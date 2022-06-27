@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from'react-router-dom';
 import { CgCloseO } from 'react-icons/cg';
 
 const OptionList = ({options}) => {
@@ -8,7 +9,7 @@ const OptionList = ({options}) => {
             <div className="bg-earthLatte md:bg-earthChoco rounded-md">  
                 <ul className="text-white font-semibold">
                     {options.map(option => 
-                        <li className="p-2 w-auto border-b md:border-none border-earthChoco md:border-earthLatte border-rounded-md hover:bg-earthSalmon hover:rounded-md hover:font-bold hover:text-earthChoco ease-linear transition-all"><a href={option.link}>{option.text}</a></li>
+                        <li className="p-2 w-auto border-b md:border-none border-earthChoco md:border-earthLatte border-rounded-md hover:bg-earthSalmon hover:rounded-md hover:font-bold hover:text-earthChoco ease-linear transition-all"><Link to={option.link}>{option.text}</Link></li>
                     )}
                 </ul>
             </div>

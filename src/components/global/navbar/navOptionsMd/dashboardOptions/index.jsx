@@ -1,13 +1,13 @@
 import React from "react";
 import NavOptionsMd from "..";
 import OptionList from "../optionList";
-import WindowSize from "../../../global/windowSize";
+import WindowSize from "../../../windowSize";
 import NavOptions from "../../navOptions";
 
 const dashboardOptionsList = [
     {
-        text: "Main",
-        link: "/",
+        text: "Index",
+        link: "/dashboard",
     }
     ,    
     {

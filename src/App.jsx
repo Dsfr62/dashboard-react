@@ -1,12 +1,11 @@
-import React from 'react'
-import Navbar from './components/navbar';
-import Dashboard from './components/dashboard';
+import React from 'react';
+import Rotas from './routes';
+
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Dashboard />
+      <Rotas />
     </div>
   )
 }

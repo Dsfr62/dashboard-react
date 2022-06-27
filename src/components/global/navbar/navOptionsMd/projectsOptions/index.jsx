@@ -1,17 +1,17 @@
 import React from "react";
 import NavOptionsMd from "..";
 import OptionList from "../optionList";
-import WindowSize from "../../../global/windowSize";
+import WindowSize from "../../../windowSize";
 import NavOptions from "../../navOptions";
 
 const projectsOptionsList = [
     {
-        text: "Main",
-        link: "/",
+        text: "Add",
+        link: "/new",
     }
     ,    
     {
-        text: "Index",
+        text: "Delete",
         link: "/",
     }
 ];

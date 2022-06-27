@@ -21,17 +21,17 @@ const AddProject = () => {
                     <form onSubmit={handleSubmit}>
 
                         <label className="font-semibold" htmlFor="projectName">Project name: </label>
-                        <input className="ml-1 bg-earthBanana ring-2 ring-earthChoco rounded-sm hover:bg-earthChoco hover:text-earthBanana hover:font-semibold ease-linear transition-all" name="projectName" type="text" value={project.projectName || ""} onChange={handleChange}/>
+                        <input className="ml-1 bg-earthBanana ring-2 ring-earthChoco rounded-sm hover:bg-earthChoco hover:text-earthBanana hover:font-semibold ease-linear transition-all" name="projectName" type="text" value={project.projectName || ""} onChange={handleChange} required/>
 
                         <br/><br/>
 
                         <label className="font-semibold" htmlFor="projectDirection">Project direction: </label>
-                        <input className="ml-1 bg-earthBanana ring-2 ring-earthChoco rounded-sm hover:bg-earthChoco hover:text-earthBanana hover:font-semibold ease-linear transition-all" name="projectDirection" type="text" value={project.projectDirection || ""} onChange={handleChange}/>
+                        <input className="ml-1 bg-earthBanana ring-2 ring-earthChoco rounded-sm hover:bg-earthChoco hover:text-earthBanana hover:font-semibold ease-linear transition-all" name="projectDirection" type="text" value={project.projectDirection || ""} onChange={handleChange} required/>
 
                         <br/><br/>
 
                         <label className="font-semibold" htmlFor="projectDate">Project date: </label>
-                        <input className="ml-1 bg-earthBanana ring-2 ring-earthChoco rounded-sm hover:bg-earthChoco hover:text-earthBanana hover:font-semibold ease-linear transition-all" name="projectDate" type="date" value={project.projectDate || ""} onChange={handleChange}/>
+                        <input className="ml-1 bg-earthBanana ring-2 ring-earthChoco rounded-sm hover:bg-earthChoco hover:text-earthBanana hover:font-semibold ease-linear transition-all" name="projectDate" type="date" value={project.projectDate || ""} onChange={handleChange} required/>
 
                         <br/>
 
